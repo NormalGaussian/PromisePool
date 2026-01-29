@@ -1,5 +1,5 @@
 {
-  "name": "promise-pool",
+  "name": "@normed/promise-pool",
   "version": "1.0.0",
   "description": "Execute async tasks with concurrency control and configurable error handling",
   "main": "dist/index.js",

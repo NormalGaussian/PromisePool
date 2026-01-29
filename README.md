@@ -1,19 +1,19 @@
-# promise-pool
+# @normed/promise-pool
 
 Execute async tasks with concurrency control and configurable error handling.
 
 ## Installation
 
 ```bash
-npm install promise-pool
+npm install @normed/promise-pool
 # or
-yarn add promise-pool
+yarn add @normed/promise-pool
 ```
 
 ## Usage
 
 ```typescript
-import { PromisePool } from 'promise-pool';
+import { PromisePool } from '@normed/promise-pool';
 
 await PromisePool({
   concurrency: 5,
