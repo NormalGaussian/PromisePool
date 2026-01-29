@@ -13,7 +13,7 @@ yarn add @normed/promise-pool
 ## Usage
 
 ```typescript
-import { PromisePool } from '@normed/promise-pool';
+import { PromisePool } from "@normed/promise-pool";
 
 await PromisePool({
   concurrency: 5,
@@ -21,7 +21,7 @@ await PromisePool({
   task: async (index) => {
     await processItem(index);
   },
-  onError: 'continue',
+  onError: "continue",
 });
 ```
 
@@ -31,20 +31,20 @@ await PromisePool({
 
 #### Options
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `concurrency` | `number` | Maximum number of concurrent tasks |
-| `count` | `number` | Total number of tasks to execute |
-| `task` | `(index: number) => Promise<void>` | Async function to execute for each index |
-| `onError` | `'abort' \| 'drain' \| 'continue'` | Error handling strategy |
+| Option        | Type                               | Description                              |
+| ------------- | ---------------------------------- | ---------------------------------------- |
+| `concurrency` | `number`                           | Maximum number of concurrent tasks       |
+| `count`       | `number`                           | Total number of tasks to execute         |
+| `task`        | `(index: number) => Promise<void>` | Async function to execute for each index |
+| `onError`     | `'abort' \| 'drain' \| 'continue'` | Error handling strategy                  |
 
 #### Error Handling Strategies
 
-| Strategy | Behavior |
-|----------|----------|
-| `abort` | Stop immediately on first error, reject with that error |
-| `drain` | Stop starting new tasks, wait for in-flight tasks to complete, reject with `AggregateError` |
-| `continue` | Process all tasks regardless of errors, reject with `AggregateError` if any failed |
+| Strategy   | Behavior                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------- |
+| `abort`    | Stop immediately on first error, reject with that error                                     |
+| `drain`    | Stop starting new tasks, wait for in-flight tasks to complete, reject with `AggregateError` |
+| `continue` | Process all tasks regardless of errors, reject with `AggregateError` if any failed          |
 
 ## License
 

@@ -11,7 +11,7 @@ const RAW_RUNTIME_STATE =
   ],\
   "dependencyTreeRoots": [\
     {\
-      "name": "promise-pool",\
+      "name": "@normed/promise-pool",\
       "reference": "workspace:."\
     }\
   ],\
@@ -19,7 +19,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "pnpZipBackend": "libzip",\
   "fallbackExclusionList": [\
-    ["promise-pool", ["workspace:."]]\
+    ["@normed/promise-pool", ["workspace:."]]\
   ],\
   "fallbackPool": [\
   ],\
@@ -28,8 +28,9 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@normed/promise-pool", "workspace:."],\
           ["@types/node", "npm:25.1.0"],\
-          ["promise-pool", "workspace:."],\
+          ["prettier", "npm:3.8.1"],\
           ["tsx", "npm:4.21.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
@@ -297,6 +298,19 @@ const RAW_RUNTIME_STATE =
           ["minipass", "npm:7.1.2"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@normed/promise-pool", [\
+      ["workspace:.", {\
+        "packageLocation": "./",\
+        "packageDependencies": [\
+          ["@normed/promise-pool", "workspace:."],\
+          ["@types/node", "npm:25.1.0"],\
+          ["prettier", "npm:3.8.1"],\
+          ["tsx", "npm:4.21.0"],\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@npmcli/agent", [\
@@ -811,6 +825,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["prettier", [\
+      ["npm:3.8.1", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.8.1-04022a855f/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.8.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["proc-log", [\
       ["npm:6.1.0", {\
         "packageLocation": "./.yarn/cache/proc-log-npm-6.1.0-84e609b3f4-4f178d4062.zip/node_modules/proc-log/",\
@@ -818,18 +841,6 @@ const RAW_RUNTIME_STATE =
           ["proc-log", "npm:6.1.0"]\
         ],\
         "linkType": "HARD"\
-      }]\
-    ]],\
-    ["promise-pool", [\
-      ["workspace:.", {\
-        "packageLocation": "./",\
-        "packageDependencies": [\
-          ["@types/node", "npm:25.1.0"],\
-          ["promise-pool", "workspace:."],\
-          ["tsx", "npm:4.21.0"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
-        ],\
-        "linkType": "SOFT"\
       }]\
     ]],\
     ["promise-retry", [\

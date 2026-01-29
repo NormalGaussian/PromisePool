@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+Adds prettier and formats the codebase.
+
 ## 1.0.0
 
 This package is a fork of `@numbereight/synchronisation`. The license remains unchanged (MIT).

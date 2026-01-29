@@ -1,1 +1,1 @@
-export { PromisePool, OnError, PromisePoolOptions } from './PromisePool';
+export { PromisePool, OnError, PromisePoolOptions } from "./PromisePool";

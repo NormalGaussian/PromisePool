@@ -4,7 +4,7 @@
  * - 'drain': Stop starting new tasks on error, wait for ongoing to complete, then throw AggregateError
  * - 'continue': Continue processing all tasks regardless of errors, then throw AggregateError if any errors
  */
-export type OnError = 'abort' | 'drain' | 'continue';
+export type OnError = "abort" | "drain" | "continue";
 
 export interface PromisePoolOptions {
   /** Maximum number of concurrent promises */
@@ -43,7 +43,8 @@ export async function PromisePool({
       }
 
       const finished = completed + errors.length;
-      const allStartedFinished = started === finished + ongoing && ongoing === 0;
+      const allStartedFinished =
+        started === finished + ongoing && ongoing === 0;
       const allTasksCompleted = completed >= count;
 
       if (allTasksCompleted || (draining && allStartedFinished)) {
@@ -91,19 +92,19 @@ export async function PromisePool({
             errors.push(e);
 
             switch (onError) {
-              case 'abort':
+              case "abort":
                 if (!ended) {
                   ended = true;
                   reject(e);
                 }
                 break;
 
-              case 'drain':
+              case "drain":
                 draining = true;
                 checkCompletion();
                 break;
 
-              case 'continue':
+              case "continue":
                 completed += 1;
                 trigger();
                 break;
